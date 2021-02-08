@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <Header></Header>
+      <tab :index="index"></tab>
+      <keep-alive>
+        <router-view/>
+        </keep-alive> 
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import tab from "@/components/tab";
+import Header from "@/components/header";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    Header,tab
+  },
+  data(){
+    return {
+      index : 0
+    }
   }
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url(./assets/css/reset.css);
+@import url(./assets/css/iconfont.css);
+#app{background-color: #222;}
 </style>
