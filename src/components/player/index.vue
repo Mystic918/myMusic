@@ -20,10 +20,10 @@
         </div>
         <div class="control">
           <!--阻止冒泡--> 
-            <i  class="icon-mini"></i> 
+            <i  :class="['btn','iconfont',playing === true ?'icon-my-start':'icon-my-stop']"></i> 
         </div>
         <div class="control" >
-          <i class="icon-playlist"></i>
+          <i  class="btn iconfont icon-my-all-row"></i> 
         </div>
       </div>
     </transition>
@@ -45,10 +45,11 @@ methods:{
     },
     ...mapMutations({
     setPlayingState: 'SET_PLAYING_STATE'
-    }),
-    ...mapGetters(['fullScreen'])
+    })
 },
-
+computed: {
+   ...mapGetters(['fullScreen','playing'])
+}
 
 }
 
@@ -56,4 +57,11 @@ methods:{
 <style scoped>
 .player{color: #fff  !important;}
 .mini-player{display: flex;align-items: center;position: fixed;left: 0;bottom: 0;z-index: 180;width: 100%;height: 60px;background:rgba(0, 0, 0, 0.5)}
+.mini-player .icon{margin:0 10px 0 20px;width: 40px;height: 40px;border-radius: 10px;}
+.mini-player .icon img{width: 40px;height: 40px;}
+.mini-player .text{flex: 1;}
+.mini-player .text .name{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;font-size: 14px;color: #fff;}
+.mini-player .text .desc{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;font-size: 12px;color: #333;}
+.control {width: 40px;height: 40px;margin: 0 5px;}
+.control .btn{font-size: 40px;color:  rgba(255,205,49,0.5);font-weight: bold;}
 </style>
