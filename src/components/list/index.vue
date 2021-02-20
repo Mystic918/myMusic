@@ -8,7 +8,6 @@
           </div>
       </div>
       <div class="music-list" v-if="type === 'musicList'">
-          <img src="http://dummyimage.com/1745x492/f1d65b" alt="">
           <div>
               <div class="list-title">标题</div>
               <div class="list-summary">内容</div>
