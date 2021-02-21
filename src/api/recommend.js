@@ -1,7 +1,8 @@
 import httpUtils from "@/assets/javascript/httpUtils.js";
+import { commonParams } from './config'
 
 export function getDiscList() {
-    const url = '/splcloud/fcgi-bin/fcg_get_diss_by_tag.fcg'
+    const url = '/getDiscList'
     const data = Object.assign({}, {
       g_tk: 5381,
       notice: 0,
@@ -17,8 +18,26 @@ export function getDiscList() {
       rnd: Math.random(),
       format: 'json'
     })
-    return httpUtils.get(url, data, { "content-type": "application/x-www-form-urlencoded", "referer": 'https://c.y.qq.com', "host": 'c.y.qq.com' }).then(res => {
-        console.log(res)
+    return httpUtils.get(url, data).then(res => {
+      return Promise.resolve(res.data)
+    })
+  }
+
+  export function getSongList(disstid) {
+    const url = '/getSongList'
+  
+    const data = Object.assign({}, commonParams, {
+      disstid,
+      type: 1,
+      json: 1,
+      utf8: 1,
+      onlysong: 0,
+      platform: 'yqq',
+      hostUin: 0,
+      needNewCode: 0
+    })
+  
+    return httpUtils.get(url, data).then((res) => {
       return Promise.resolve(res.data)
     })
   }

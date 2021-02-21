@@ -7,7 +7,11 @@ const routes = [
   {
     path: '/recommend',
     component: () => import('@/views/recommend'),
-    hidden: true
+    hidden: true,
+    children: [{
+      path: '/recommend/:id',
+      component: () => import('@/views/detailed')
+    }]
   },
 ];
 

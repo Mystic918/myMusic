@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 let Axios = axios.create({
-    timeout: 1000,
-    headers: {referer: 'https://c.y.qq.com', host: 'c.y.qq.com' }
+    baseURL: '/api',
+    timeout: 1000
 });
 
 // Axios.interceptors.response.use(function (response) {

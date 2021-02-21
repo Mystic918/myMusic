@@ -69,6 +69,7 @@ export default {
 .slide-ul{
     width: 750rem;
     height: 400rem;
+    overflow: hidden;
 }
 .slide-ul img{
     width: 750rem;

@@ -127,7 +127,7 @@ computed: {
 
 .background{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;opacity: 0.6;filter: blur(20px);}
 
-.mini-player{display: flex;align-items: center;position: fixed;left: 0;bottom: 0;z-index: 180;width: 100%;height: 60px;background:#333;}
+.mini-player{display: flex;align-items: center;position: fixed;left: 0;right:0;bottom: 0;z-index: 180;width: 750rem;margin: 0 auto;height: 60px;background:#333;z-index: 1001;}
 .mini-player .icon{margin:0 10px 0 20px;width: 40px;height: 40px;border-radius: 20px;overflow: hidden;}
 .mini-player .icon img{width: 40px;height: 40px;}
 .mini-player .text{flex: 1;}
@@ -135,7 +135,7 @@ computed: {
 .mini-player .text .desc{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;font-size: 12px;color: #ccc;}
 .control {width: 40px;height: 40px;margin: 0 5px;}
 .control .btn{font-size: 40px;color:  #ffcd32;font-weight: bold;}
-.normal-player{position: fixed;z-index: 999;background:#222;left: 0;bottom: 0;width: 100%;height: 100%;}
+.normal-player{position: fixed;z-index: 999;background:#222;left: 0;right:0;bottom: 0;width: 750rem;margin: 0 auto;height: 100%;}
 .back i{font-size: 32px;color: #ffcd32;margin-left: 20px;}
 .title{font-size: 20px;color: #fff;text-align: center;font-weight: normal;margin-bottom: 10px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .subtitle{font-size: 16px;color: #fff;text-align: center;font-weight: normal;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
@@ -156,7 +156,7 @@ computed: {
 .progress-bar-wrapper{flex: 1;height: 5px;border-radius: 5px;overflow: hidden;background-color: #333;margin: 0 10px;position: relative;}
 .progress-bar-wrapper .start{background-color: #ffcd32;height: 5px;position: absolute;left: 0;}
 
-.bottom{position: fixed;bottom: 0;width: 100%;}
+.bottom{position: fixed;bottom: 0;width: 750rem;left: 0;right: 0;margin: auto;}
 .operators{display: flex;padding: 20px 20px 30px 20px;justify-content: center;align-items: center;}
 .operators .icon-btn{margin: 0 10px;font-size: 40px;color: #ffcd32;font-weight: bold;}
 </style>

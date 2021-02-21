@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store"
 import { Flexible } from "@/assets/javascript/flexible.js";
 Vue.config.productionTip = false;
-Flexible(750)
+Flexible(750, 750)
 new Vue({
   router,
   store,
